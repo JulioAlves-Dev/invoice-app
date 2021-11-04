@@ -40,8 +40,8 @@ Os usuários devem ser capazes de:
 
 ### Construído com
 
-- React [Link](https://reactjs.org/)
-- React Router [Link](https://reactrouter.com/)
+- [React](https://reactjs.org/)
+- [React Router](https://reactrouter.com/)
 
 ## Autor
 

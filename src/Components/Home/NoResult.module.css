@@ -1,0 +1,37 @@
+.NoResult {
+  max-width: 230px;
+  text-align: center;
+  margin-top: 8rem;
+}
+.NoResult h2 {
+  color: var(--c-color);
+  margin-top: 4rem;
+}
+
+.NoResult p {
+  margin-top: 1.5rem;
+  color: var(--f-color);
+}
+.NoResult p span {
+  font-weight: 700;
+}
+
+.NoResult.Dark h2 {
+  color: #fff;
+}
+.NoResult.Dark p {
+  color: var(--e-color);
+}
+
+@media (max-width: 600px) {
+  .NoResult {
+    margin-top: 4rem;
+  }
+  .NoResult h2 {
+    margin-top: 2.5rem;
+  }
+
+  .NoResult p {
+    margin-top: 1rem;
+  }
+}

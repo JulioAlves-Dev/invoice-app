@@ -1,0 +1,56 @@
+.ButtonsCreate {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 156px;
+  margin-right: 60px;
+  justify-content: space-between;
+}
+.Discard {
+  background: #f9fafe;
+  color: var(--g-color);
+}
+.SaveDraft {
+  background: #373b53;
+  color: var(--f-color);
+}
+.SaveSend {
+  background: var(--a-color);
+  color: #fff;
+  margin-left: 0.5rem;
+}
+.SaveSend:hover {
+  background: var(--b-color);
+}
+.SaveDraft:hover {
+  background: var(--h-color);
+}
+.Discard:hover {
+  background-color: var(--e-color);
+}
+
+/* DARK MODE */
+
+.Dark .SaveDraft {
+  color: var(--e-color);
+}
+
+.Dark .SaveDraft:hover {
+  background: var(--c-color);
+}
+
+@media (max-width: 550px) {
+  .ButtonsCreate {
+    margin-left: 0;
+    margin-right: 0px;
+  }
+  .GroupButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .SaveSend {
+    margin-left: 0rem;
+    margin-top: 1rem;
+  }
+}

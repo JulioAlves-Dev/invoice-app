@@ -1,0 +1,111 @@
+.Nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4.5rem;
+}
+.Title p {
+  color: var(--f-color);
+  margin-top: 0.5rem;
+}
+
+.Buttons {
+  display: flex;
+  position: relative;
+}
+
+.Filter,
+.NewInvoice {
+  border: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.TextMobile {
+  display: none;
+}
+.Filter p {
+  margin-right: 1rem;
+  font-weight: 700;
+}
+.Filter span {
+  transition: 0.3s;
+}
+
+.Filter span.ArrowActive {
+  transform: rotate(180deg);
+}
+.NewInvoice {
+  display: flex;
+  background: var(--a-color);
+  padding: 0.5rem;
+  border-radius: 50px;
+  margin-left: 2rem;
+  transition: background 0.3s;
+}
+.NewInvoice:hover {
+  background: var(--b-color);
+}
+.NewIcon {
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.NewInvoice p {
+  margin-top: 2px;
+  font-weight: bold;
+  color: #fff;
+  padding-right: 0.5rem;
+}
+
+/* DARK MODE */
+
+.Title h1,
+.Title p,
+.Filter p {
+  transition: 0.3s;
+}
+.Dark .Title h1 {
+  color: #fff;
+}
+.Dark .Title p {
+  color: var(--e-color);
+}
+.Dark .Filter p {
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .Nav {
+    margin-top: 3rem;
+  }
+  .Title h1 {
+    font-size: 20px;
+  }
+  .TextDesktop {
+    display: none;
+  }
+  .TextMobile {
+    display: initial;
+  }
+  .NewIcon {
+    margin-right: 0.5rem;
+  }
+  .NewInvoice {
+    padding: 0.35rem;
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .Filter {
+    margin-left: 0.5rem;
+  }
+}

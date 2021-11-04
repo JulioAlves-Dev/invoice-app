@@ -1,0 +1,52 @@
+.Input {
+  margin-top: 1.5rem;
+}
+.Input label {
+  display: flex;
+  justify-content: space-between;
+  color: var(--g-color);
+  font-size: 12px;
+  margin-bottom: 0.625rem;
+}
+
+.Error {
+  color: var(--i-color);
+}
+.ErrorWarning {
+  font-size: 10px;
+}
+.InputError,
+.InputError:hover,
+.InputError:focus {
+  border-color: var(--i-color);
+}
+
+/* DARK MODE */
+
+.Dark.Input label {
+  color: var(--e-color);
+}
+.Dark.Input input {
+  background: var(--c-color);
+  border-color: var(--d-color);
+  color: #fff;
+}
+
+.Dark.Input input::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.Dark.Input input:hover,
+.Dark.Input input:focus {
+  border-color: var(--a-color);
+}
+
+.Dark .Error {
+  color: var(--i-color);
+}
+.Dark input.InputError,
+.Dark input.InputError:hover,
+.Dark input.InputError:focus {
+  border-color: var(--i-color);
+}

@@ -1,0 +1,296 @@
+.FormCreateUpdate {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  opacity: 0;
+  animation: animaModal 0.3s forwards;
+}
+
+@keyframes animaModal {
+  to {
+    opacity: 1;
+  }
+}
+
+.FormContent {
+  max-width: 720px;
+  height: 100vh;
+  background-color: #fff;
+  border-radius: 0px 20px 20px 0px;
+  padding-left: 156px;
+  padding-right: 36px;
+  padding-bottom: 200px;
+  position: relative;
+  overflow: hidden;
+  transform: translateX(-50px);
+  animation: animaForm forwards 0.3s;
+  transition: background 0.3s;
+}
+
+@keyframes animaForm {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.FormContent h2 {
+  display: inline-block;
+  margin: 3.5rem 0 3rem 0;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+}
+.EditHashtag {
+  color: var(--f-color);
+}
+.FormGoBack {
+  font-weight: 700;
+  background: transparent;
+  border: none;
+  display: none;
+  margin-top: 7rem;
+  color: var(--h-color);
+}
+.Dark .FormGoBack {
+  color: #fff;
+}
+.FormGoBack svg {
+  margin-right: 1rem;
+}
+
+.Form {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 1rem;
+  padding-bottom: 5rem;
+}
+.Form::-webkit-scrollbar {
+  width: 8px;
+}
+.Form::-webkit-scrollbar-track {
+  background: transparent;
+}
+.Form::-webkit-scrollbar-thumb {
+  background: var(--e-color);
+  border-radius: 4px;
+}
+.Dark .Form::-webkit-scrollbar-thumb {
+  background: var(--d-color);
+}
+
+.Form b {
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.25px;
+  color: var(--a-color);
+}
+
+.FormBillFrom {
+  margin-bottom: 3rem;
+}
+
+.Group2,
+.Group3 {
+  display: grid;
+  gap: 1.5rem;
+}
+.Group2 {
+  grid-template-columns: 1fr 1fr;
+}
+.Group3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.Payment {
+  margin-top: 1.5rem;
+}
+.Payment label {
+  display: block;
+  color: var(--g-color);
+  font-size: 12px;
+  margin-bottom: 0.625rem;
+}
+.Payment select {
+  height: 3rem;
+  width: 100%;
+  font-size: 12px;
+  letter-spacing: -0.25px;
+  padding-left: 20px;
+  font-weight: 700;
+  font-family: "Spartan", sans-serif;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid var(--e-color);
+  transition: 0.3s;
+}
+
+.Payment select:hover,
+.Payment select:focus {
+  border-color: var(--b-color);
+}
+.ItemList {
+  margin-top: 2rem;
+}
+.ItemList b {
+  font-size: 18px;
+  line-height: 32px;
+  color: #777f98;
+}
+
+.NameItems {
+  display: grid;
+  grid-template-columns: 1fr 46px 100px 80px 20px;
+  column-gap: 1rem;
+  align-items: flex-end;
+}
+.NameItems {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.NameItems span {
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--g-color);
+}
+
+.AddNewItem {
+  width: 100%;
+  height: 3rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  border: none;
+  background-color: #f9fafe;
+  color: var(--g-color);
+  font-weight: bold;
+  font-size: 12px;
+  transition: background-color 0.3s;
+}
+.AddNewItem:hover {
+  background-color: var(--e-color);
+}
+
+.Error1,
+.Error2 {
+  color: var(--i-color);
+}
+.Error1 {
+  margin-top: 2rem;
+}
+.Error2 {
+  margin-top: 0.5rem;
+}
+
+.Buttons {
+  position: fixed;
+  height: 110px;
+  background-color: #fff;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0 20px 20px 0;
+  box-shadow: 10px -20px 50px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.ButtonsMobile {
+  display: none;
+  margin-top: 2rem;
+}
+
+/* DARK MODE */
+
+.Dark .FormContent {
+  background: var(--l-color);
+}
+
+.Dark .FormContent h2 {
+  color: #fff;
+}
+
+.Dark .Payment label {
+  color: var(--e-color);
+}
+.Dark .Payment select {
+  background: var(--c-color);
+  border-color: var(--d-color);
+  color: #fff;
+}
+
+.Dark .Payment select:hover,
+.Dark .Payment select:focus {
+  border-color: var(--a-color);
+}
+
+.Dark .NameItems span {
+  color: var(--e-color);
+}
+.Dark .AddNewItem {
+  background: var(--d-color);
+  color: var(--e-color);
+}
+
+.Dark .AddNewItem:hover {
+  background: var(--c-color);
+}
+
+.Dark .Buttons {
+  background: var(--l-color);
+}
+
+@media (max-width: 850px) {
+  .FormContent {
+    padding-left: 3.5rem;
+    max-width: 650px;
+  }
+
+  .FormContent h2 {
+    margin: 8rem 0 3rem 0;
+  }
+
+  .Form {
+    padding-bottom: 8rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .FormContent {
+    padding-left: 1.5rem;
+    padding-right: 0.5rem;
+    border-radius: 0;
+  }
+  .FormContent h2 {
+    margin: 1.5rem 0;
+  }
+  .FormGoBack {
+    display: block;
+  }
+
+  .Group3,
+  .Group2 {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .ItemList {
+    overflow-x: auto;
+  }
+
+  .NameItems {
+    grid-template-columns: 200px 46px 100px 80px 20px;
+  }
+  .Buttons {
+    display: none;
+  }
+  .ButtonsMobile {
+    display: flex;
+  }
+  .FormContent {
+    padding-bottom: 200px;
+  }
+}

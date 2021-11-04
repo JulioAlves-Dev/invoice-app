@@ -1,0 +1,88 @@
+.DeleteInvoice {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 555;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: animaDeleteModal forwards 0.3s;
+}
+@keyframes animaDeleteModal {
+  to {
+    opacity: 1;
+  }
+}
+.Confirmation {
+  max-width: 480px;
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 8px;
+}
+
+.Confirmation b {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+}
+.Confirmation p {
+  line-height: 22px;
+  color: var(--f-color);
+  margin-top: 0.8125rem;
+}
+.Buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+.Cancel {
+  background: #f9fafe;
+  color: var(--g-color);
+}
+.Cancel:hover {
+  background: var(--e-color);
+}
+.Delete {
+  background: var(--i-color);
+  color: #fff;
+  margin-left: 0.5rem;
+}
+.Delete:hover {
+  background: var(--j-color);
+}
+
+/* DARK MODE */
+
+.Dark .Confirmation {
+  background: var(--c-color);
+}
+
+.Dark .Confirmation b {
+  color: #fff;
+}
+
+.Dark .Confirmation p {
+  color: var(--e-color);
+}
+
+.Dark .Cancel {
+  background: var(--d-color);
+  color: var(--e-color);
+}
+.Dark .Cancel:hover {
+  background: var(--l-color);
+}
+
+@media (max-width: 500px) {
+  .Confirmation {
+    margin: 0 1.5rem;
+    padding: 2rem;
+  }
+  .Confirmation b {
+    font-size: 20px;
+  }
+}

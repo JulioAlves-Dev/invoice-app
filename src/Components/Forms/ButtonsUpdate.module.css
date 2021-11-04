@@ -1,0 +1,43 @@
+.ButtonsUpdate {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 156px;
+  margin-right: 60px;
+}
+
+.ButtonsUpdate {
+  justify-content: flex-end;
+}
+.Save {
+  background: var(--a-color);
+  color: #fff;
+  margin-left: 0.5rem;
+}
+
+.Cancel {
+  background: #f9fafe;
+  color: var(--g-color);
+}
+
+.Save:hover {
+  background: var(--b-color);
+}
+.Cancel:hover {
+  background-color: var(--e-color);
+}
+
+.Dark .Cancel {
+  background: var(--d-color);
+}
+
+.Dark .Cancel:hover {
+  background: var(--c-color);
+}
+
+@media (max-width: 550px) {
+  .ButtonsUpdate {
+    margin-left: 0;
+    margin-right: 30px;
+  }
+}

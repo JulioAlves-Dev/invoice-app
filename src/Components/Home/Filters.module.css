@@ -1,0 +1,69 @@
+.Filters {
+  position: absolute;
+  width: 192px;
+  background: #fff;
+  top: 50px;
+  left: -40px;
+  border-radius: 8px;
+  box-shadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
+  padding: 1.5rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: animaFilter 0.3s forwards;
+  z-index: 20;
+}
+@keyframes animaFilter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.Filter {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.Filter:nth-child(3) {
+  margin-bottom: 0;
+}
+
+.Box {
+  width: 16px;
+  height: 16px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background: var(--e-color);
+  transition: 0.3s;
+}
+.Box.Active {
+  background: var(--a-color);
+}
+.Filter:hover .Box {
+  border-color: var(--a-color);
+}
+.Filter p {
+  font-weight: 700;
+  margin-top: 2px;
+  margin-left: 0.75rem;
+  text-transform: capitalize;
+}
+
+.Filters.Dark {
+  background: var(--d-color);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.Dark .Box {
+  background: var(--c-color);
+}
+
+.Dark .Box.Active {
+  background: var(--a-color);
+}
+
+.Dark .Filter p {
+  color: #fff;
+}

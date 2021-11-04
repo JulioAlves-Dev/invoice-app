@@ -1,0 +1,130 @@
+.Invoices {
+  width: 100%;
+  margin-top: 4rem;
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: animaInvoices 0.3s forwards;
+}
+@keyframes animaInvoices {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.Invoices a {
+  text-decoration: none;
+  color: var(--h-color);
+}
+.Invoice {
+  background: #fff;
+  box-shadow: 0px 10px 10px -5px rgba(72, 84, 159, 0.1);
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem 1.1rem 2rem;
+  border: 1px solid transparent;
+  transition: 0.3s;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.5fr 1.5fr 1.5fr 20px;
+  align-items: center;
+  gap: 6px;
+}
+.Invoice:hover {
+  border-color: var(--a-color);
+}
+
+.InfoId span {
+  color: var(--g-color);
+}
+.InfoDate,
+.InfoName {
+  color: var(--f-color);
+}
+
+.InfoStatusContent,
+.InfoPrice,
+.InfoArrow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.InfoDate,
+.InfoName,
+.InfoPrice {
+  overflow: hidden;
+}
+
+.InfoPrice h3,
+.InfoDate p,
+.InfoName p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*  DARK MODE  */
+
+.Dark .Invoice {
+  background-color: var(--c-color);
+  box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.1);
+}
+
+.Dark .InfoId h4 {
+  color: #fff;
+}
+
+.Dark .InfoDate p {
+  color: var(--e-color);
+}
+.Dark .InfoName {
+  color: #fff;
+}
+.Dark .InfoPrice h3 {
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .Invoices {
+    margin-top: 2rem;
+  }
+  .InfoPrice {
+    justify-content: flex-start;
+  }
+  .InfoName {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .InfoId,
+  .InfoName {
+    margin-bottom: 1rem;
+  }
+  .InfoId {
+    grid-area: id;
+  }
+  .InfoDate {
+    grid-area: date;
+  }
+  .InfoName {
+    grid-area: name;
+  }
+  .InfoPrice {
+    grid-area: price;
+  }
+  .InfoStatusContent {
+    grid-area: status;
+  }
+  .Invoice {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "id name"
+      "date status"
+      "price status";
+    gap: initial;
+    padding: 1.5rem;
+  }
+  .InfoArrow {
+    display: none;
+  }
+}

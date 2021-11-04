@@ -1,0 +1,129 @@
+.Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 103px;
+  height: 100vh;
+  background: var(--d-color);
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 200;
+}
+.Logo {
+  width: 103px;
+  height: 103px;
+  background: var(--a-color);
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+}
+.Logo::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  left: 0;
+  background: var(--b-color);
+  border-radius: 20px 0 0 0;
+  z-index: -1;
+}
+.LogoImg {
+  width: 44px;
+}
+.Mode,
+.UserPhoto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+}
+.Mode {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.Mode button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.Mode button svg {
+  animation: animaSvg forwards 0.3s;
+  transform: rotate(180deg);
+}
+@keyframes animaSvg {
+  to {
+    transform: rotate(0deg);
+  }
+}
+.Mode button path {
+  transition: 0.3s;
+}
+.Mode button:hover path {
+  fill: var(--e-color);
+}
+
+.Photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.Photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 850px) {
+  .Header {
+    width: 100vw;
+    height: 80px;
+    border-radius: 0;
+    flex-direction: row;
+  }
+  .Logo {
+    width: 80px;
+    height: 80px;
+  }
+  .LogoImg {
+    width: 31px;
+  }
+  .ModeUser {
+    display: flex;
+  }
+  .Mode,
+  .UserPhoto {
+    height: initial;
+    width: 100px;
+  }
+  .Mode {
+    border: none;
+    border-right: 2px solid rgba(255, 255, 255, 0.1);
+  }
+  .Photo {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 500px) {
+  .Header {
+    height: 72px;
+  }
+  .Logo {
+    width: 72px;
+    height: 72px;
+  }
+
+  .Mode,
+  .UserPhoto {
+    width: 75px;
+  }
+}

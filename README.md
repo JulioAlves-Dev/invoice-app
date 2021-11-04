@@ -34,7 +34,7 @@ Os usuários devem ser capazes de:
 
 ### Links
 
-- URL do site ao vivo: [Link](https://julioalves-dev.github.io/invoice-app/)
+- URL do site ao vivo: [Link](https://invoice-app-ih0bu081o-julioalves-dev.vercel.app/)
 
 ## Processo
 
